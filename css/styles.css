@@ -527,7 +527,6 @@ h1 {
   text-align: center;
   color: #fff;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  margin: auto;
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 36px;
@@ -789,7 +788,6 @@ h3 {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
-  margin-top: 8px;
 }
 
 .border-team {
@@ -902,19 +900,12 @@ h3 {
   row-gap: 48px;
 }
 
-.portfolio-img {
-  width: 288px;
-  height: 280px;
-}
-
 .portfolio-part {
   background: #fff;
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  width: 288px;
-  height: 400px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -989,16 +980,6 @@ h3 {
     row-gap: 72px;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .portfolio-part {
-    width: 356px;
-    height: 420px;
-  }
-
-  .portfolio-img {
-    width: 356px;
-    height: 300px;
-  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1019,11 +1000,6 @@ h3 {
       0 2px 1px 0 rgba(46, 47, 66, 0.08),
       0 1px 1px 0 rgba(46, 47, 66, 0.16),
       0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  }
-
-  .portfolio-img {
-    width: 360px;
-    height: 300px;
   }
 }
 
@@ -1206,7 +1182,6 @@ h3 {
     column-gap: 24px;
     gap: 80px;
     flex-wrap: wrap;
-    padding-left: 108px;
   }
 
   .footer-logo-text-container {
