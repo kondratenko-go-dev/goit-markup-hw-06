@@ -991,7 +991,6 @@ h3 {
 
   .portfolio-part {
     box-shadow: none;
-    width: 360px;
   }
 
   .portfolio-part:hover {
@@ -1214,7 +1213,7 @@ h3 {
   .footer .container {
     display: flex;
     align-items: baseline;
-    max-width: 1140px;
+    max-width: 1158px;
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
