@@ -1178,8 +1178,12 @@ h3 {
   .footer .container {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-start;
+    text-align: left;
+    gap: 72px 24px;
     flex-wrap: wrap;
+    max-width: 584px;
+  }
   }
 
   .footer-logo-text-container {
