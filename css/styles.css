@@ -572,7 +572,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .main-hero {
     height: 436px;
-    padding-top: 112px;
+    padding: 112px 0;
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url('../images/MainHero-t.jpg');
@@ -601,7 +601,7 @@ h1 {
 @media screen and (min-width: 1158px) {
   .main-hero {
     height: 660px;
-    padding-top: 188px;
+    padding: 188px 0;
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url('../images/MainHero-d.jpg');
