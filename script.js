@@ -1,37 +1,58 @@
-(() => {
-  const refs = {
-    // Додати атрибут data-modal-open на кнопку відкриття
-    openModalBtn: document.querySelector('[data-menu-open]'),
-    // Додати атрибут data-modal-close на кнопку закриття
-    closeModalBtn: document.querySelector('[data-menu-close]'),
-    // Додати атрибут data-modal на бекдроп модалки
-    modal: document.querySelector('[data-menu]'),
-  };
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const closeButton = document.querySelector(".mobile-menu-close");
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  // Open menu
+  menuButton.addEventListener("click", function () {
+    mobileMenu.classList.add("open");
+    mobileMenu.classList.remove("closing");
+  });
 
-  function toggleModal() {
-    // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
-    refs.modal.classList.toggle('is-open');
+  // Close menu function with animation
+  function closeMenu() {
+    mobileMenu.classList.add("closing");
+    setTimeout(() => {
+      mobileMenu.classList.remove("open", "closing");
+    }, 300); // Matches the transition duration (0.3s)
   }
-})();
 
-(() => {
-  const refs = {
-    // Додати атрибут data-modal-open на кнопку відкриття
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    // Додати атрибут data-modal-close на кнопку закриття
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    // Додати атрибут data-modal на бекдроп модалки
-    modal: document.querySelector("[data-modal]"),
-  };
+  // Close when clicking the close button
+  closeButton.addEventListener("click", closeMenu);
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  // Close menu when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
+  });
+});
 
-  function toggleModal() {
-    // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
-    refs.modal.classList.toggle("is-open");
-  }
-})();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const orderButton = document.getElementById("orderServiceButton");
+    const modalOverlay = document.querySelector(".modal-overlay");
+    const closeButton = document.querySelector(".modal-icon");
+
+    // Function to open the modal
+    function openModal() {
+        modalOverlay.classList.add("is-open");
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        modalOverlay.classList.remove("is-open");
+    }
+
+    // Event listeners
+    orderButton.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+    
+    // Close modal when clicking outside of it
+    modalOverlay.addEventListener("click", function (event) {
+        if (event.target === modalOverlay) {
+            closeModal();
+        }
+    });
+});
